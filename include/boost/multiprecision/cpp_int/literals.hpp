@@ -267,10 +267,12 @@ constexpr typename boost::multiprecision::literals::detail::unsigned_cpp_int_lit
           boost::multiprecision::backends::cpp_int_backend<Bits, Bits, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void> >::value;                                                                \
    }
 
+#ifndef _MSC_VER
 BOOST_MP_DEFINE_SIZED_CPP_INT_LITERAL(128)
 BOOST_MP_DEFINE_SIZED_CPP_INT_LITERAL(256)
 BOOST_MP_DEFINE_SIZED_CPP_INT_LITERAL(512)
 BOOST_MP_DEFINE_SIZED_CPP_INT_LITERAL(1024)
+#endif
 
 } // namespace literals
 
